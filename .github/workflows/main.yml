@@ -31,4 +31,4 @@ jobs:
           external_repository: desenvolvedordesite/desenvolvedordesite
           publish_dir: ./build
           cname: desenvolvedordesite.github.io
-          commit_message: "Deploy to GitHub Pages"
+          commit_message: "Deploy to GitHub Pages" 

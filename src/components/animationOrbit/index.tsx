@@ -9,7 +9,7 @@ const Orbit: React.FC = () => {
   // const classes = useStyles();
 
   return (
-    <Grid container sx={{border: "0px solid red"}} >
+    <Grid container justifyContent={"center"} sx={{border: "0px solid purple"}} >
     <div className="orbit">
       
       <ul className="orbit-wrap">
