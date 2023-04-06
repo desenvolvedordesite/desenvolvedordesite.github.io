@@ -103,7 +103,7 @@ const Home: React.FC<Props> = ({ children, ...props }) => {
                     <Grid item xs={12} lg={5.9} sx={{border: "0px solid blue"}}>
 
                         {/* <ContentRight/> */}
-                        {isMobile ? (<ContentTitle></ContentTitle>) : (<OrbitAnimation/>)}
+                        {isMobile ? (<ContentTitle></ContentTitle>) : (<OrbitAnimation/>)} 
 
                     </Grid>
         {/* Card Service */}
