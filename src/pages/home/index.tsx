@@ -84,7 +84,7 @@ const Home: React.FC<Props> = ({ children, ...props }) => {
     }
 
     return (
-        <Grid container position={"inherit"} width={"90%"} justifyContent={"center"} sx={{border: "0px solid red", marginLeft: "auto", marginRight: "auto", padding: 1.2, marginTop: isMobile ? 0 : 5}} gap={4}>
+        <Grid container position={"inherit"} width={"91%"} justifyContent={"center"} sx={{border: "0px solid red", marginLeft: "auto", marginRight: "auto", padding: 1.2, marginTop: isMobile ? 0 : 5}} gap={4}>
     {/* Header */}
             <Grid item component={"header"}  xs={12} sx={{border: "0px solid blue", display:"flex", alignItems:"center", gap: 1 , margin: "auto", padding: 0.5}}>
         {/* Logotipo */}
