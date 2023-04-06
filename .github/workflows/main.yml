@@ -1,4 +1,4 @@
-name: 🚀 Build and Deploy
+name: 🚀 Build and Deploy Up
 
 on:
   push:
@@ -24,11 +24,10 @@ jobs:
         run: npm run build
           
 
-      - name: Deploy GitHub Pages
+      - name: Deploy GitHub Pages - Desenvolvedor 
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.TOKEN_GITHUB }}
-          external_repository: desenvolvedordesite/desenvolvedordesite
           publish_dir: ./build
           cname: desenvolvedordesite.github.io
           commit_message: "Deploy to GitHub Pages" 
