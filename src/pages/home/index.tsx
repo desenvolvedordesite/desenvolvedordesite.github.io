@@ -84,7 +84,7 @@ const Home: React.FC<Props> = ({ children, ...props }) => {
     }
 
     return (
-        <Grid container position={"inherit"} width={"91%"} justifyContent={"center"} sx={{border: "0px solid red", marginLeft: "auto", marginRight: "auto", padding: 1.2, marginTop: isMobile ? 0 : 5}} gap={4}>
+        <Grid container position={"inherit"} width={"91%"} justifyContent={"center"} sx={{border: "0px solid red", marginLeft: "auto", marginRight: "auto", padding: 1.2, marginTop: isMobile ? 0 : 5}} gap={isMobile ? 1 : 4}>
     {/* Header */}
             <Grid item component={"header"}  xs={12} sx={{border: "0px solid blue", display:"flex", alignItems:"center", gap: 1 , margin: "auto", padding: 0.5}}>
         {/* Logotipo */}
@@ -113,7 +113,7 @@ const Home: React.FC<Props> = ({ children, ...props }) => {
                 </Grid>
             </Grid>
     {/* Footer */}
-            <Grid item xs={12} className='footer' textAlign={"center"} sx={{backgroundColor: "#000", position: "fixed", bottom: 0, width: "100%"}}>
+            <Grid item xs={12} className='footer' textAlign={"center"} sx={{backgroundColor: "#000", position: "sticky", bottom: 0, width: "100%"}}>
                 <Footer></Footer>
             </Grid>
         </Grid>
