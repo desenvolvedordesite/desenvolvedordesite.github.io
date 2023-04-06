@@ -113,7 +113,7 @@ const Home: React.FC<Props> = ({ children, ...props }) => {
                 </Grid>
             </Grid>
     {/* Footer */}
-            <Grid item xs={12} className='footer' textAlign={"center"} sx={{backgroundColor: "#000", position: "sticky", bottom: 0, width: "100%"}}>
+            <Grid item xs={12} className='footer' textAlign={"center"} sx={{backgroundColor: "#000", position: "relative", bottom: 0, width: "100%"}}>
                 <Footer></Footer>
             </Grid>
         </Grid>
