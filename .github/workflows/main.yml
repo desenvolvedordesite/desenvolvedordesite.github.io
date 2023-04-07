@@ -22,13 +22,17 @@ jobs:
         
       - name: 🔨 Build application
         run: npm run build
-          
+    
+      - name: Move build files to root directory
+        run: |
+          mv build/* .
+          rmdir build
 
       - name: Deploy GitHub Pages - Desenvolvedor 
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.TOKEN_GITHUB }}
           external_repository: desenvolvedordesite/desenvolvedordesite
-          publish_dir: ./build/
+          publish_dir: .
           cname: desenvolvedordesite.github.io
           commit_message: "Deploy to GitHub Pages"
