@@ -1,0 +1,39 @@
+name: Deploy to CloudFlare
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Publish to Cloudflare Pages
+    steps:
+      - name: 🧾 Checkout do repositório
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: 📦 Instalar dependências do projeto
+        run: npm install --legacy-peer-deps
+
+      - name: 🛠️ Build do Next.js (estático)
+        run: npm run build
+
+      - name: 🚀 Deploy no Cloudflare Pages
+        uses: cloudflare/pages-action@1
+        with:
+          gitHubToken: ${{ secrets.TOKEN_GITHUB }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: "desenvolvedordesite"
+          directory: "build"
+          branch: main
